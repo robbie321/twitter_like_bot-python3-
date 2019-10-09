@@ -312,3 +312,23 @@ JavaScript error: https://abs.twimg.com/responsive-web/web/ondemand.PlayerBase.9
 JavaScript error: https://abs.twimg.com/responsive-web/web/ondemand.PlayerBase.9ca30a220c9b08c94.js, line 1: TypeError: r[e] is undefined
 JavaScript error: https://abs.twimg.com/responsive-web/web/ondemand.PlayerBase.9ca30a220c9b08c94.js, line 1: TypeError: r[e] is undefined
 1570493358856	Marionette	INFO	Stopped listening on port 43957
+1570494108805	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Cfb4C3NGNZAV"
+1570494109464	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1570494109465	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1570494109465	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1570494109466	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1570494112272	Marionette	INFO	Listening on port 38231
+1570494112333	Marionette	WARN	TLS certificate errors will be ignored for this session
+1570494117072	Marionette	INFO	Stopped listening on port 38231
+1570494126919	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.cdK88KYMLJUs"
+1570494127574	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1570494127574	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1570494127574	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1570494127575	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1570494130348	Marionette	INFO	Listening on port 33369
+1570494130432	Marionette	WARN	TLS certificate errors will be ignored for this session
+1570494144699	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+bail@chrome://marionette/content/sync.js:237:64
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

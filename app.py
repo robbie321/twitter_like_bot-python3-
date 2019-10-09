@@ -19,13 +19,16 @@ class TwitterBot:
         wait = WebDriverWait(bot, 20)
         try:
             # Sign in button finder by Class_Name & click
-            loginpage = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'StaticLoggedOutHomePage-buttonLogin'))).click()
-            print('Made it to login page')
+            loginpage = wait.until(EC.element_to_be_clickable(
+                (By.CLASS_NAME, 'StaticLoggedOutHomePage-buttonLogin'))).click()
+            # print('Made it to login page')
             time.sleep(6)
             # Email & username input field finder by XPATH
-            email = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="page-container"]/div/div[1]/form/fieldset/div[1]/input')))
+            email = wait.until(EC.element_to_be_clickable(
+                (By.XPATH, '//*[@id="page-container"]/div/div[1]/form/fieldset/div[1]/input')))
             # Password input field finder by XPATH
-            password = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="page-container"]/div/div[1]/form/fieldset/div[2]/input')))
+            password = wait.until(EC.visibility_of_element_located(
+                (By.XPATH, '//*[@id="page-container"]/div/div[1]/form/fieldset/div[2]/input')))
             email.clear()
             password.clear()
             email.send_keys(self.username)
@@ -44,16 +47,20 @@ class TwitterBot:
         wait = WebDriverWait(bot, 6)
         time.sleep(3)
         try:
-            for i in range(1,3):
-                bot.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+            for i in range(1, 3):
+                bot.execute_script(
+                    'window.scrollTo(0, document.body.scrollHeight)')
                 time.sleep(2)
-                tweets = wait.until(EC.visibility_of_any_elements_located((By.CLASS_NAME, 'tweet')))
-                links = [elem.get_attribute('data-permalink-path') for elem in tweets]
+                tweets = wait.until(
+                    EC.visibility_of_any_elements_located((By.CLASS_NAME, 'tweet')))
+                links = [elem.get_attribute('data-permalink-path')
+                         for elem in tweets]
                 # print(links)
                 for link in links:
                     bot.get('https://twitter.com' + link)
                     try:
-                        wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'HeartAnimation'))).click()
+                        wait.until(EC.element_to_be_clickable(
+                            (By.CLASS_NAME, 'HeartAnimation'))).click()
                         print('Liked a tweet')
                         time.sleep(10)
                     except Exception as error:
@@ -66,6 +73,7 @@ class TwitterBot:
             bot.quit()
 
 
-car = TwitterBot('rmalone1414@gmail.com', 'arsenalrock') #TwitterBot takes the username and password ('username', 'password')
+# TwitterBot takes the username and password ('username', 'password')
+car = TwitterBot('rmalone1414@gmail.com', 'arsenalrock')
 car.login()
-car.like_tweets('AFC') # like_tweets takes the hashtag ('hashtag')
+car.like_tweets('AFC')  # like_tweets takes the hashtag ('hashtag')
